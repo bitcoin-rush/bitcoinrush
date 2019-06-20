@@ -1,0 +1,33 @@
+# /etc/conf.d/bitcoinrushd: config file for /etc/init.d/bitcoinrushd
+
+# Config file location
+#BITCOINRUSHD_CONFIGFILE="/etc/bitcoinrush/bitcoinrush.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOINRUSHD_USER)
+#BITCOINRUSHD_PIDDIR="/var/run/bitcoinrushd"
+
+# What filename to give the pidfile
+#BITCOINRUSHD_PIDFILE="${BITCOINRUSHD_PIDDIR}/bitcoinrushd.pid"
+
+# Where to write bitcoinrushd data (be mindful that the blockchain is large)
+#BITCOINRUSHD_DATADIR="/var/lib/bitcoinrushd"
+
+# User and group to own bitcoinrushd process
+#BITCOINRUSHD_USER="bitcoinrush"
+#BITCOINRUSHD_GROUP="bitcoinrush"
+
+# Path to bitcoinrushd executable
+#BITCOINRUSHD_BIN="/usr/bin/bitcoinrushd"
+
+# Nice value to run bitcoinrushd under
+#BITCOINRUSHD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOINRUSHD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitcoinrushd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOINRUSHD_SIGTERM_TIMEOUT=60
